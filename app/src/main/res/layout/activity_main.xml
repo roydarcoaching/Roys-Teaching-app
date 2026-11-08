@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#1E1E1E">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#2D2D2D">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="5dp">
+
+            <Button android:id="@+id/btn_open_pdf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Open PDF" />
+            <Button android:id="@+id/btn_add_page" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Blank Page" />
+            <Button android:id="@+id/btn_add_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ Image" />
+            <Button android:id="@+id/btn_pen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pen" />
+            <Button android:id="@+id/btn_eraser" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Eraser" />
+            <Button android:id="@+id/btn_clear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Clear" />
+            <Button android:id="@+id/btn_prev" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="◀" />
+            <TextView android:id="@+id/tv_page" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="#FFFFFF" android:padding="5dp" android:text="Page: 0/0" />
+            <Button android:id="@+id/btn_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="▶" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF">
+
+        <com.teaching.pad.TeachingCanvasView
+            android:id="@+id/teaching_canvas"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+</LinearLayout>
